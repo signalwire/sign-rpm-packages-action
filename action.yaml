@@ -1,5 +1,5 @@
 # action.yml
-name: 'Sign RPM'
+name: 'Sign RPM packages'
 description: 'Sign RPM packages actions'
 inputs:
   gpg_name: 
