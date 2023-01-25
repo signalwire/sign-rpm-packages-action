@@ -1,1 +1,1 @@
-# sign-rpm-packages-aciton
+# sign-rpm-packages-action
