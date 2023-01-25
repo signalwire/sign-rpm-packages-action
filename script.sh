@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat > /root/.rpmmacros <<EOF
+cat > .rpmmacros <<EOF
 %_signature gpg
 %_gpg_name $INPUT_GPG_NAME
 EOF
