@@ -10,7 +10,8 @@ cp *.rpm .
 cat /root/.rpmmacros 
 ls -l
 pwd
-gpg --batch --import $INPUT_GPG_FILE
+gpg --batch --import $INPUT_GPGKEY_FILE
+gpg --batch --import $INPUT_GPGCERT_FILE
 
 
 echo stuff in incoming

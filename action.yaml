@@ -6,8 +6,12 @@ inputs:
     description: 'GPG name'
     required: true
     default: ''
-  gpg_file: 
-    description: 'Path to GPG file'
+  gpgkey_file: 
+    description: 'Path to a GPG Key file'
+    required: true
+    default: ''
+  gpgcert_file: 
+    description: 'Path to a GPG Certificate file'
     required: true
     default: ''
   rpm_path: 
