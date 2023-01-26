@@ -21,7 +21,7 @@ for i in `ls -1 *rpm`; do echo $i; expect /data/passphrase.expect $i; done
 mkdir -p $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
 cp *.rpm $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
 
-createrepo 
+createrepo $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
 
 rm -f $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml.asc
 gpg --batch --detach-sign --armor $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml
