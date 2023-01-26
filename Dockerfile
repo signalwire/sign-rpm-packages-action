@@ -5,7 +5,7 @@ WORKDIR /data
 
 RUN yum install -y rpm-build rpmdevtools rpm-sign createrepo
 COPY script.sh script.sh
-COPY passhprase.expect passhprase.expect
+COPY passphrase.expect passphrase.expect
 RUN chmod +x script.sh
 CMD ["sh", "/data/script.sh"]
 
