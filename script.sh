@@ -27,5 +27,5 @@ rm -f $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml.asc
 gpg --batch --detach-sign --armor $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml.asc
 
 
-tar -czvf rpms.tar.gz $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml.asc 
+tar -czvf rpms.tar.gz $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
 
