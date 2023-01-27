@@ -5,14 +5,8 @@ cat > ~/.rpmmacros <<EOF
 %_gpg_name $INPUT_GPG_NAME
 EOF
 
-
-cp *.rpm .
-cat /root/.rpmmacros 
-ls -l
-pwd
 gpg --batch --import $INPUT_GPGKEY_FILE
 gpg --batch --import $INPUT_GPGCERT_FILE
-
 
 echo stuff in incoming
 find .
@@ -27,6 +21,4 @@ createrepo $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
 rm -f $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml.asc
 gpg --batch --detach-sign --armor $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml
 
-
 tar -czvf $INPUT_TAR_NAME.tar.gz $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
-
