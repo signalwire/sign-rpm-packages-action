@@ -21,4 +21,4 @@ createrepo $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
 rm -f $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml.asc
 gpg --batch --detach-sign --armor $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER/repodata/repomd.xml
 
-tar -czvf $INPUT_TAR_NAME.tar.gz $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
+tar -czvf $INPUT_TAR_NAME.tar.gz -P $INPUT_TARGET_PATH/$INPUT_TARGET_FOLDER
