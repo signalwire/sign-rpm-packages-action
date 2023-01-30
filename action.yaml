@@ -6,8 +6,12 @@ inputs:
     description: 'GPG name'
     required: true
     default: ''
-  gpg_file: 
-    description: 'Path to GPG file'
+  gpgkey_file: 
+    description: 'Path to a GPG Key file'
+    required: true
+    default: ''
+  gpgcert_file: 
+    description: 'Path to a GPG Certificate file'
     required: true
     default: ''
   rpm_path: 
@@ -22,6 +26,10 @@ inputs:
     description: 'The final folder where the packages should be sent to'
     required: true
     default: ''
+  tar_name:
+    description: 'A name for the tar file that will contains all generated files'
+    required: true
+    
 runs:
   using: 'docker'
   image: 'Dockerfile'
