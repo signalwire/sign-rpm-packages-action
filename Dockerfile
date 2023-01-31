@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 centos:7.2.1511
+FROM --platform=linux/amd64 centos:8.4.2105
 
 RUN mkdir /data
 WORKDIR /data
